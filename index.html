@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>𝑹𝑬𝑴𝑶 — ريمو</title>
+<meta name="description" content="إلى الفتاة التي بقيت مميزة رغم مرور الوقت">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== LOADING SCREEN ===================== -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-ring loader-ring2"></div>
+    <h1 class="loader-logo">𝑹𝑬𝑴𝑶</h1>
+    <p class="loader-sub">ريمو</p>
+    <div class="loader-bar"><span id="loaderProgress"></span></div>
+  </div>
+</div>
+
+<!-- custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- top progress bar -->
+<div class="scroll-progress"><span id="scrollProgressFill"></span></div>
+
+<!-- ===================== BACKGROUND LAYERS ===================== -->
+<div class="sky" id="sky">
+  <canvas id="starCanvas"></canvas>
+  <div class="moon">
+    <div class="moon-glow"></div>
+    <div class="moon-body"></div>
+  </div>
+  <div class="clouds">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+  </div>
+  <div class="aurora"></div>
+  <div class="fog"></div>
+  <canvas id="fireflyCanvas"></canvas>
+  <canvas id="heartsCanvas"></canvas>
+  <div class="mouse-light" id="mouseLight"></div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="nav-brand-ar">ريمو</span>
+    <span class="nav-brand-en">𝑹𝑬𝑴𝑶</span>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">🏠 الرئيسية</a></li>
+    <li><a href="#congrats" class="nav-link">🎓 تهنئة النجاح</a></li>
+    <li><a href="#love" class="nav-link">❤️ الحب</a></li>
+    <li><a href="#distance" class="nav-link">🌍 حب المسافات</a></li>
+    <li><a href="#far" class="nav-link">🌙 الحب البعيد</a></li>
+    <li><a href="#waiting" class="nav-link">⏳ الحب المنتظر</a></li>
+    <li><a href="#poems" class="nav-link">📜 القصائد</a></li>
+    <li><a href="#poetry" class="nav-link">🖋 الشعر</a></li>
+    <li><a href="#letters" class="nav-link">💌 الرسائل</a></li>
+    <li><a href="#memories" class="nav-link">✨ ذكريات</a></li>
+    <li><a href="#ending" class="nav-link">🤍 النهاية</a></li>
+  </ul>
+  <div class="nav-clock" id="navClock">
+    <span id="clockTime">--:--</span>
+    <span id="clockDate">----/--/--</span>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero reveal" id="home">
+  <div class="hero-constellation">
+    <canvas id="heartConstellation"></canvas>
+  </div>
+  <p class="hero-eyebrow">إلى القلب الذي لم يتغيّر بريقه</p>
+  <h1 class="hero-title">
+    <span class="hero-title-ar">ريمو</span>
+    <span class="hero-title-en">𝑹𝑬𝑴𝑶</span>
+  </h1>
+  <p class="hero-subtitle" id="typedSubtitle"></p>
+  <div class="hero-scroll-hint">
+    <span>انزلي إلى الأسفل</span>
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== CONGRATULATIONS ===================== -->
+<section class="section" id="congrats">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">لحظة فخر</span>
+    <h2 class="section-title">🎓 تهنئة النجاح</h2>
+    <p class="section-desc">كل تعبٍ يستحق أن يُحتفى به، وكل نجاحٍ منكِ يستحق أن يُروى</p>
+  </div>
+
+  <div class="post-grid">
+    <article class="post-card gold reveal">
+      <span class="post-icon">🏆</span>
+      <h3>تستحقين كل هذا وأكثر</h3>
+      <p>مبروك يا ريمو، ليس لأن النجاح جاء سهلاً، بل لأنكِ تعبتِ من أجله وصبرتِ عليه في الأيام التي لم يكن فيها أحد يرى مجهودك سوى الله ثم نفسك. أنا فخور بكِ بطريقة لا تسعها الكلمات، فخور بإصرارك، بعنادك الجميل، وبقدرتك على النهوض في كل مرة كانت الدنيا تحاول أن توقفك فيها.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">🌟</span>
+      <h3>خطوة على طريق طويل مضيء</h3>
+      <p>هذا النجاح ليس نهاية الطريق، بل بداية طريق أجمل. أنتِ لستِ فقط ذكية، أنتِ إنسانة تملك قلباً كبيراً يليق بكل ما تحققينه. استمري، فالعالم بحاجة لأشخاص مثلكِ يضيئون الطريق للآخرين بمثالهم.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">💫</span>
+      <h3>كلمة لن أتعب من ترديدها</h3>
+      <p>مهما كبرت إنجازاتك، سأبقى أول من يهتف باسمك، وأول من يفتخر بكِ بصمت وبصوت عالٍ في آنٍ واحد. مبروك يا أجمل نجاح.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== LOVE ===================== -->
+<section class="section alt" id="love">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">صدق لا يتغيّر</span>
+    <h2 class="section-title">❤️ الحب</h2>
+    <p class="section-desc">حبٌ مبني على الاحترام والثقة والوفاء، لا على الكلمات وحدها</p>
+  </div>
+
+  <div class="post-grid">
+    <article class="post-card pink reveal">
+      <span class="post-icon">🤍</span>
+      <h3>احترامك أولاً</h3>
+      <p>قبل أن أحبكِ، أنا أحترمكِ. أحترم رأيك، مساحتك، قراراتك، وحقك في أن تكوني كما تريدين لا كما يتوقع منكِ أحد. الحب الحقيقي يبدأ من هنا، من مكانٍ لا تشعرين فيه أنكِ مضطرة لتبرير نفسك.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">🔒</span>
+      <h3>الثقة سرّ بقائنا</h3>
+      <p>لا أحتاج أن أراقبكِ لأطمئن، ثقتي بكِ أكبر من كل الشكوك. وهذا ليس سذاجة، بل يقين بأن ما بيننا مبني على أساس أقوى من أن تهزّه مسافة أو صمت مؤقت.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">🕊️</span>
+      <h3>الوفاء ليس كلمة أقولها فقط</h3>
+      <p>الوفاء عندي فعل، لا شعار. هو أن أبقى كما عرفتني، لا يتغيّر قلبي مع تغيّر الأيام. وفائي لكِ ليس مشروطاً بشيء، هو ببساطة جزء مني.</p>
+    </article>
+
+    <article class="post-card gold reveal">
+      <span class="post-icon">🫶</span>
+      <h3>الاهتمام في التفاصيل الصغيرة</h3>
+      <p>لست بحاجة لمناسبة كي أهتم بكِ، اهتمامي يعيش في التفاصيل: في سؤالي عن يومك، في قلقي عليكِ حين تصمتين، في فرحي البسيط حين أعرف أنكِ بخير.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== DISTANCE LOVE ===================== -->
+<section class="section" id="distance">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">مهما بعدت الأرض</span>
+    <h2 class="section-title">🌍 حب المسافات</h2>
+    <p class="section-desc">المسافة اختبار، لا نهاية</p>
+  </div>
+
+  <div class="post-grid">
+    <article class="post-card reveal">
+      <span class="post-icon">🗺️</span>
+      <h3>خريطة القلب لا تعرف الكيلومترات</h3>
+      <p>مهما فصلت بيننا المسافات، القلب له خريطة خاصة لا تعترف بالحدود ولا بالمطارات. أنتِ قريبة مني كل لحظة، حتى وإن كانت المدن بيننا كثيرة.</p>
+    </article>
+
+    <article class="post-card pink reveal">
+      <span class="post-icon">🌅</span>
+      <h3>الأمل يكبر مع كل غروب</h3>
+      <p>كل يوم يمر هو يوم أقرب لرؤيتك، لا يوم أبعد. أتعلم الأمل منكِ، من صبرك، ومن إيمانك بأن كل شيء جميل يستحق الانتظار.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">📮</span>
+      <h3>الاشتياق لغة نتقنها معاً</h3>
+      <p>تعلمنا أن نشتاق دون أن ننهار، أن ننتظر دون أن نيأس. هذا الاشتياق نفسه دليل على أن ما بيننا حقيقي وليس وهماً تصنعه القرب.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== FAR LOVE ===================== -->
+<section class="section alt" id="far">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">في عمق الليل</span>
+    <h2 class="section-title">🌙 الحب البعيد</h2>
+    <p class="section-desc">حين ينام العالم، يبقى قلبي مستيقظاً يفكر فيكِ</p>
+  </div>
+
+  <div class="post-grid">
+    <article class="post-card gold reveal">
+      <span class="post-icon">🌌</span>
+      <h3>ساعات الليل المتأخرة</h3>
+      <p>في تلك الساعات التي ينام فيها الجميع، أبقى أنا وذكراكِ مستيقظين. أفكر في صوتكِ، في ضحكتك، في كل التفاصيل الصغيرة التي لا يعرف أحد أنها تعني لي الكثير.</p>
+    </article>
+
+    <article class="post-card reveal">
+      <span class="post-icon">🕯️</span>
+      <h3>ذكرى لا تخفت</h3>
+      <p>البعد لا يُضعف الذكرى، بل يزيدها وضوحاً. كل تفصيلة فيكِ محفورة بدقة، لا يمحوها وقت ولا مسافة ولا صمت طويل.</p>
+    </article>
+
+    <article class="post-card pink reveal">
+      <span class="post-icon">🌠</span>
+      <h3>النجوم شاهدة</h3>
+      <p>أنظر أحياناً للسماء وأتخيلكِ تنظرين لنفس النجوم، في توقيت مختلف ربما، لكن تحت نفس السماء التي تجمعنا رغم كل شيء.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== WAITING LOVE ===================== -->
+<section class="section" id="waiting">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">لا استسلام</span>
+    <h2 class="section-title">⏳ الحب المنتظر</h2>
+    <p class="section-desc">بعض الأشياء تستحق أن ننتظرها مهما طال الطريق</p>
+  </div>
+
+  <div class="post-grid">
+    <article class="post-card reveal">
+      <span class="post-icon">🧭</span>
+      <h3>القدر له توقيته الخاص</h3>
+      <p>لا أؤمن بأن الأشياء الجميلة تأتي بسهولة، أؤمن بأن كل شيء له وقته المناسب. وأنا مستعد أن أنتظر ذلك التوقيت مهما طال، لأن ما ينتظرني يستحق كل هذا الصبر.</p>
+    </article>
+
+    <article class="post-card gold reveal">
+      <span class="post-icon">🔮</span>
+      <h3>المستقبل الذي أتخيله</h3>
+      <p>أتخيل يوماً لا تفصلنا فيه مسافة ولا ظروف، يوماً نضحك فيه على كل الأيام الصعبة التي مررنا بها ونحن معاً أخيراً، بلا انتظار وبلا وداع.</p>
+    </article>
+
+    <article class="post-card pink reveal">
+      <span class="post-icon">🌱</span>
+      <h3>الأمل الذي لا يذبل</h3>
+      <p>مهما طال الانتظار، لن أدع الأمل يذبل. لأن الأشياء التي تستحق فعلاً، لا تُقاس بالوقت الذي أخذته، بل بالقيمة التي تستحقها.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== POEMS (long) ===================== -->
+<section class="section alt poems" id="poems">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">قصائد من القلب</span>
+    <h2 class="section-title">📜 القصائد</h2>
+    <p class="section-desc">كلماتٌ طويلة، لأن مشاعري لا تكتفي بسطرٍ واحد</p>
+  </div>
+
+  <article class="poem-card reveal">
+    <h3 class="poem-title">قصيدة: يا أجمل ما كتبه القدر</h3>
+    <p class="poem-text">
+      يا مَن سكنتِ القلبَ دون استئذانِ..<br>
+      وزرعتِ فيه بستاناً من الأمانِ..<br>
+      لم أكُ أدري أنَّ للقلبِ عيوناً..<br>
+      حتى رأيتُكِ فامتلأتُ يقيناً..<br><br>
+      أنتِ لستِ عابرةً في دفتري..<br>
+      بل أنتِ أجملُ سطرٍ في قدري..<br>
+      كلُّ مسافةٍ بيننا ستهون يوماً..<br>
+      وسيبقى حبي لكِ نجماً لا يغيب..<br><br>
+      اصبري كما صبرتِ دوماً بشموخ..<br>
+      فالآتي أجملُ مما مضى بكثير..<br>
+      وسأبقى أحرسُ هذا الحلمَ وحدي..<br>
+      حتى يجمعنا يومٌ بلا رحيل..
+    </p>
+  </article>
+
+  <article class="poem-card reveal">
+    <h3 class="poem-title">قصيدة: رسالة إلى القمر</h3>
+    <p class="poem-text">
+      يا قمراً يزور نافذتي كل ليلة..<br>
+      أعرها ضوءكَ لتصل إلى نافذتها..<br>
+      قل لها إن كان النومُ قد غافلها..<br>
+      أن قلباً هنا لا ينام قبل أن يذكرها..<br><br>
+      قل لها إن الشوق مهنة أتقنتها..<br>
+      وإن الانتظار عادة تعلمتها..<br>
+      وإن كل نجمة في سمائي تحمل اسمها..<br>
+      وإن كل دعوة في ليلي تبدأ بذكرها..
+    </p>
+  </article>
+</section>
+
+<!-- ===================== SHORT POETRY ===================== -->
+<section class="section poetry" id="poetry">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">لمسات قصيرة</span>
+    <h2 class="section-title">🖋 الشعر</h2>
+    <p class="section-desc">أبيات صغيرة، بحجم لحظة، لكنها تحمل عمر شعور</p>
+  </div>
+
+  <div class="verse-grid">
+    <p class="verse reveal">قلبي معكِ.. حتى في غيابي</p>
+    <p class="verse reveal">أنتِ الصمتُ الذي أحبه</p>
+    <p class="verse reveal">لكِ في كل خاطرة نصيب</p>
+    <p class="verse reveal">أشتاقكِ بصمتٍ يليق بكِ</p>
+    <p class="verse reveal">ما زلتِ الاستثناء الوحيد</p>
+    <p class="verse reveal">حبكِ عادةٌ لا أريد الشفاء منها</p>
+  </div>
+</section>
+
+<!-- ===================== LETTERS ===================== -->
+<section class="section alt" id="letters">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">حروف لا تُقال بصوت</span>
+    <h2 class="section-title">💌 الرسائل</h2>
+    <p class="section-desc">رسائل طويلة، صادقة، بلا زخرفة زائدة</p>
+  </div>
+
+  <article class="letter-card reveal">
+    <div class="letter-seal">💌</div>
+    <h3>عزيزتي ريمو،</h3>
+    <p>
+      لا أعرف من أين أبدأ، فكل مرة أحاول فيها أن أكتب لكِ أجد أن الكلمات أصغر من المشاعر التي أحملها. أنتِ لستِ مجرد اسم أردده، أنتِ إحساس كامل يرافقني في تفاصيل يومي البسيطة، في لحظة صحوي، وفي آخر أفكاري قبل النوم.
+    </p>
+    <p>
+      أريدك أن تعرفي أنني أراكِ بكل تفاصيلك، لا أرى فقط الجميلة منها، بل أرى تعبك، قلقك، لحظات ضعفك أيضاً، وأحبك بها كما أحبك بأجمل لحظاتك. لست بحاجة لأن تكوني مثالية كي تستحقي هذا الحب، أنتِ تستحقينه لأنكِ أنتِ ببساطة.
+    </p>
+    <p>
+      مهما طال البعد، ومهما جاءت الأيام بصعوباتها، أعدكِ أن قلبي سيبقى وفياً لكِ، لن يتغير ولن يتزحزح. أنتظر اليوم الذي تصبح فيه المسافة مجرد ذكرى نضحك عليها معاً.
+    </p>
+    <p class="letter-sign">أحبكِ، وسأظل كذلك<br>إلى الأبد</p>
+  </article>
+
+  <article class="letter-card reveal">
+    <div class="letter-seal">✉️</div>
+    <h3>إلى الفتاة التي غيّرت معنى الانتظار،</h3>
+    <p>
+      قبل أن أعرفكِ، كان الانتظار عندي مضيعة للوقت. أما الآن، فهو أجمل جزء في يومي لأنه ينتهي دائماً بفكرة عنكِ. علّمتِني أن الحب الحقيقي لا يحتاج قرباً جسدياً كي يكون صادقاً، يحتاج فقط قلبين مخلصين.
+    </p>
+    <p>
+      شكراً لأنكِ بقيتِ كما أنتِ، صادقة، قوية، ومميزة رغم كل الظروف. شكراً لأنكِ منحتِني سبباً أؤمن به كل يوم.
+    </p>
+    <p class="letter-sign">لكِ دائماً</p>
+  </article>
+</section>
+
+<!-- ===================== MEMORIES / TIMELINE ===================== -->
+<section class="section memories" id="memories">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">خط الزمن</span>
+    <h2 class="section-title">✨ ذكريات</h2>
+    <p class="section-desc">لحظات مضت، وأحلام لم تأتِ بعد</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-tag">البداية</span>
+        <h4>أول حديث</h4>
+        <p>لحظة بسيطة لم تكن تعني الكثير في حينها، لكنها كانت بداية كل شيء جميل جاء بعدها.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-tag">لحظة</span>
+        <h4>أول ضحكة صادقة</h4>
+        <p>لحظة اكتشفتُ فيها أن ضحكتك تصنع في يومي فرقاً لا يصنعه شيء آخر.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-tag">اليوم</span>
+        <h4>ما زلنا هنا</h4>
+        <p>رغم كل الظروف والمسافات، ما زلنا هنا، وهذا وحده إنجاز يستحق الاحتفاء.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot future"></div>
+      <div class="timeline-card future">
+        <span class="timeline-tag">أمنية</span>
+        <h4>غداً الذي أنتظره</h4>
+        <p>يوم نلتقي فيه بلا وداع في نهايته، ونبدأ فيه فصلاً جديداً بلا مسافات.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ENDING ===================== -->
+<section class="section ending" id="ending">
+  <div class="ending-content reveal">
+    <span class="ending-icon">🤍</span>
+    <h2>إلى ريمو،</h2>
+    <p>
+      كل ما كُتب هنا ليس سوى جزء بسيط مما يحمله القلب. أنتِ تستحقين كل كلمة صادقة، وكل احترام، وكل وفاء. شكراً لأنكِ أنتِ.
+    </p>
+    <p class="ending-signature">دائماً وأبداً، 𝑹𝑬𝑴𝑶 💫</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <p>Made With Love ❤️</p>
+  <p class="footer-name">For <span>ريمو</span> · <span>𝑹𝑬𝑴𝑶</span></p>
+</footer>
+
+<!-- ===================== FLOATING CONTROLS ===================== -->
+<button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
+
+<button class="music-fab" id="musicFab">
+  <span class="music-fab-icon">🎵</span>
+  <span class="music-fab-text">Romantic Atmosphere</span>
+</button>
+
+<!-- ===================== SOUND PANEL ===================== -->
+<div class="sound-panel" id="soundPanel">
+  <div class="sound-panel-header">
+    <h3>🎧 الجو الرومانسي</h3>
+    <button class="sound-close" id="soundClose">✕</button>
+  </div>
+
+  <div class="song-player">
+    <div class="song-art">💿</div>
+    <div class="song-info">
+      <p class="song-name">أغنية القلب</p>
+      <p class="song-hint">تعمل تلقائياً عند فتح الموقع</p>
+      <div class="song-progress"><span id="songProgressFill"></span></div>
+    </div>
+    <div class="song-controls">
+      <button id="songPlayPause">▶</button>
+      <input type="range" id="songVolume" min="0" max="100" value="60">
+    </div>
+    <audio id="bgSong" src="assets/music/song.mp3" loop preload="auto" autoplay muted playsinline></audio>
+  </div>
+
+  <div class="sound-list" id="soundList"></div>
+
+  <button class="sound-save" id="soundSave">💾 حفظ التفضيلات</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
